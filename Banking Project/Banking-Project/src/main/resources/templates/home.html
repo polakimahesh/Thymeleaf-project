@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="ISO-8859-1">
-  <title>Home module</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-</head>
-<body>
-
-<div class="container-fluid overflow-hidden">
-  <div class="row vh-100 overflow-auto">
-    <!-- below line code replace with the component nav bar-->
-    <div th:replace="component :: navbar">this is nav bar</div>
-    <!-- list of users -->
-    <div  class="col d-flex flex-column h-sm-100" align="center">
-
-      <h1> Welcome to Bank </h1>
-      <div>
-      <img src="https://static.vecteezy.com/system/resources/previews/000/364/243/original/modern-flat-web-page-design-template-concept-of-online-banking-vector.jpg"  width="100%" height="100%">
-      </div>
-
+<!-- list of users -->
+<div class="col d-flex flex-column h-sm-100" align="center">
+    <h1> Welcome to Bank </h1>
+    <div>
+        <img src="https://static.vecteezy.com/system/resources/previews/000/364/243/original/modern-flat-web-page-design-template-concept-of-online-banking-vector.jpg"
+             width="100%" height="100%">
     </div>
-  </div>
+
 </div>
-</body>
-</html>

@@ -18,12 +18,21 @@ public class UsersController {
     public String getAllUsers(Model model){
         List<Users> users=usersService.getAllUsers();
         model.addAttribute("alluserlist",users);
-        return "users";
+        model.addAttribute("template","users.html");
+//        model.addAttribute("style","users.css");
+        model.addAttribute("title","User");
+        return "component";
     }
 
     @GetMapping("/")
-    public String getHome(){
-        return "home";
+    public String getHome(Model model){
+        model.addAttribute("template","home.html");
+        model.addAttribute("title","Home");
+        return "component";
+    }
+    @GetMapping("/sample")
+    public String getSample(){
+        return "sample";
     }
 
 }

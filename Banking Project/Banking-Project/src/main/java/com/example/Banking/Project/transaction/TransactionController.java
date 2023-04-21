@@ -11,11 +11,15 @@ public class TransactionController {
     @GetMapping("/transactions")
     public String getAllTransaction(Model model){
         model.addAttribute("allTransaction",transactionService.getAllTransaction());
-        return "transaction";
+        model.addAttribute("template","transaction.html");
+        model.addAttribute("title","Transaction");
+        return "component";
     }
     @GetMapping("/providers")
-    public String getProviders(){
-        return "provider";
+    public String getProviders(Model model){
+        model.addAttribute("template","provider.html");
+        model.addAttribute("title","Providers");
+        return "component";
     }
 
 }
