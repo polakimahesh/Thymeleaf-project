@@ -12,10 +12,17 @@ public class UsersService {
     @Autowired
     private UsersRepository usersRepository;
 
-    public List<Users> getAllUsers(){
-        return usersRepository.findAll();
+    public List<Users> getAllUsers() {
+        return usersRepository.findAllByOrderByIdAsc();
     }
 
+    public Users getSingleUser(int id) {
+        return usersRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user id: " + id));
+    }
+
+    public void save(Users users){
+        usersRepository.save(users);
+    }
 
 
 }

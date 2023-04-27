@@ -1,0 +1,7 @@
+.bg-coloring-heading{
+background: rgb(57,51,171);
+background: linear-gradient(90deg, rgba(57,51,171,1) 19%, rgba(125,11,152,1) 100%, rgba(0,212,255,1) 100%);
+color: white;
+}
+
+

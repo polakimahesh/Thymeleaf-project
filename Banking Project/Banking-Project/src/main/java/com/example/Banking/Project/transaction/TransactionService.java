@@ -13,4 +13,8 @@ public class TransactionService {
     public List<Transaction> getAllTransaction(){
         return transactionRepository.findAll();
     }
+
+    public  List<Transaction> getAllTransactionBySingleUser(int id){
+        return transactionRepository.findByUserId_Id(id);
+    }
 }

@@ -3,10 +3,62 @@
 
 <div class="col d-flex flex-column h-sm-100" align="center">
 
-    <h1> welcome to Paypal </h1>
-    <div>
-        <img src="https://e3arabi.com/wp-content/uploads/2020/10/banking-4397449_1920.jpg" width="100%"
-             height="100%">
+    <div class="card m-5 shadow-lg w-80 bg-coloring-heading"  align="center">
+        <div class="card-body">
+            <h5 class="card-title">Payment Gateways</h5>
+            <div class="card mb-3 m-2 shadow-lg" style="max-width: 340px;">
+                <img src="https://razorpay.com/blog-content/uploads/2019/06/what-is-a-payment-gateway-and-how-does-it-work.png" class="img-fluid rounded-start" >
+            </div>
+        </div>
+    </div>
+    <div class="card text-center m-5">
+        <div class="card-body">
+            <h5 class="card-title">online payment gateways</h5>
+            <p class="card-text">A Payment Gateway is an eCommerce application service that authorizes credit card or debit card payments for online businesses,
+                online retailers, bricks and clicks, or
+                traditional brick and mortar.</p>
+            <P>**click below button to know the gateway merchants**</P>
+        </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <a href="http://localhost:8080/providers/paypal" class="btn btn-outline-secondary btn-rounded m-3" >Paypal</a>
+            </div>
+            <div class="col-3">
+                <a href="http://localhost:8080/providers/trustpay" class="btn btn-outline-secondary btn-rounded m-3" >TrustPay</a>
+            </div>
+            <div class="col-3">
+                <a href="http://localhost:8080/providers/RazoPay" class="btn btn-outline-secondary btn-rounded m-3" >Razopay</a>
+            </div>
+            <div class="col-3">
+                <a href="http://localhost:8080/providers/Payu" class="btn btn-outline-secondary btn-rounded m-3" >Payu</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div> <a  onclick="openForm()" class="btn btn-primary btn-sm mb-3" >Add Provider-Merchant</a></div>
+    <div id="form1"  style = "display:none">
+        <form  action="#" th:action="@{/add}" th:object="${provider}  "
+              method="POST">
+            <input type="text" th:field="*{gatewayName}" placeholder="Enter Gateway Name"
+                   class="form-control mb-4 col-4">
+            <input type="text" th:field="*{users}" placeholder="Enter User Id"
+                   class="form-control mb-4 col-4">
+
+            <button  type="submit" class="btn btn-info col-2">Save
+                Provider
+            </button>
+        </form>
+    </div>
+
+
 </div>
+<script>
+function openForm()
+{
+ document.getElementById("form1").style.display="block";
+}
+</script>
+

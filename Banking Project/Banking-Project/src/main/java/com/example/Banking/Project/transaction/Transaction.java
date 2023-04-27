@@ -1,6 +1,7 @@
 package com.example.Banking.Project.transaction;
 
 
+import com.example.Banking.Project.users.Users;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,5 +25,7 @@ public class Transaction {
     private Double amount;
     private String transactionDescription;
     private LocalDateTime transactionTime;
+    @ManyToOne
+    private Users userId;
 
 }
