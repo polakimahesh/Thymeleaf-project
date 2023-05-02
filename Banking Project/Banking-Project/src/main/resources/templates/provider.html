@@ -6,8 +6,9 @@
     <div class="card m-5 shadow-lg w-80 bg-coloring-heading"  align="center">
         <div class="card-body">
             <h5 class="card-title">Payment Gateways</h5>
-            <div class="card mb-3 m-2 shadow-lg" style="max-width: 340px;">
+            <div class="card mb-3 m-2 shadow-lg" style="max-width: 240px;">
                 <img src="https://razorpay.com/blog-content/uploads/2019/06/what-is-a-payment-gateway-and-how-does-it-work.png" class="img-fluid rounded-start" >
+                <img src="https://d6xcmfyh68wv8.cloudfront.net/assets/payments/payment_method_cards.png" >
             </div>
         </div>
     </div>
@@ -24,16 +25,16 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <a href="http://localhost:8080/providers/paypal" class="btn btn-outline-secondary btn-rounded m-3" >Paypal</a>
+                <a th:href="@{/providers/paypal}" class="btn btn-outline-secondary btn-rounded m-3" >Paypal</a>
             </div>
             <div class="col-3">
-                <a href="http://localhost:8080/providers/trustpay" class="btn btn-outline-secondary btn-rounded m-3" >TrustPay</a>
+                <a th:href="@{/providers/trustpay}" class="btn btn-outline-secondary btn-rounded m-3" >TrustPay</a>
             </div>
             <div class="col-3">
-                <a href="http://localhost:8080/providers/RazoPay" class="btn btn-outline-secondary btn-rounded m-3" >Razopay</a>
+                <a th:href="@{/providers/razopay}" class="btn btn-outline-secondary btn-rounded m-3" >Razopay</a>
             </div>
             <div class="col-3">
-                <a href="http://localhost:8080/providers/Payu" class="btn btn-outline-secondary btn-rounded m-3" >Payu</a>
+                <a th:href="@{/providers/payu}" class="btn btn-outline-secondary btn-rounded m-3" >Payu</a>
             </div>
         </div>
     </div>
@@ -56,9 +57,10 @@
 
 </div>
 <script>
-function openForm()
-{
- document.getElementById("form1").style.display="block";
+function openForm(){
+var x=document.getElementById("form1");
+if(x.style.display==="none")
+     x.style.display="block";
 }
 </script>
 

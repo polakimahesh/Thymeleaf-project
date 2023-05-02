@@ -14,11 +14,11 @@ public class ProviderController {
     private ProviderService providerService;
     @GetMapping("/providers")
     public String getProviders(Model model){
-        Provider provider = new Provider();
+        Provider providers = new Provider();
         model.addAttribute("template","provider.html");
         model.addAttribute("title","Providers");
         model.addAttribute("style","provider.css");
-        model.addAttribute("provider",provider);
+        model.addAttribute("provider",providers);
         return "component";
     }
     @GetMapping("/providers/{gatewayName}")

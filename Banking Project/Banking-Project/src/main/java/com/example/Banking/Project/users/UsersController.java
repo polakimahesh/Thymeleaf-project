@@ -55,4 +55,19 @@ public class UsersController {
         return "redirect:/users";
     }
 
+    @GetMapping("/delete/{id}")
+    public  String deleteUser( @PathVariable int id){
+        usersService.deleteUserById(id);
+        return "redirect:/users";
+    }
+
+    @GetMapping("/register-user/{id}")
+    public String updateUser(Model model,@PathVariable("id") int id){
+        Users users = usersService.getSingleUser(id);
+        model.addAttribute("user",users);
+        model.addAttribute("template","newUser.html");
+        model.addAttribute("title","Update-User");
+        return "component";
+    }
+
 }
