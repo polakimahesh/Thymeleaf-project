@@ -23,7 +23,7 @@ public class UsersController {
         model.addAttribute("alluserlist",users);
         model.addAttribute("template","users.html");
         model.addAttribute("style","users.css");
-        model.addAttribute("title","User");
+        model.addAttribute("title","Users");
         return "component";
     }
 
@@ -31,6 +31,14 @@ public class UsersController {
     public String getHome(Model model){
         model.addAttribute("template","home.html");
         model.addAttribute("title","Home");
+        model.addAttribute("style","home.css");
+        return "component";
+    }
+    @GetMapping("/aboutUs")
+    public String getAboutUs(Model model){
+        model.addAttribute("template","about.html");
+        model.addAttribute("title","About Us");
+        model.addAttribute("style","about.css");
         return "component";
     }
     @GetMapping("/users/{id}")

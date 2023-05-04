@@ -1,13 +1,27 @@
 
 <!--list of providers-->
 
-<div class="col d-flex flex-column h-sm-100" align="center">
+<div class="col d-flex flex-column " align="center">
 
     <div class="card m-5 shadow-lg w-80 bg-coloring-heading"  align="center">
-        <div class="card-body">
-            <h5 class="card-title">Payment Gateways</h5>
+        <h5 class="card-title blink">Payment Gateways</h5>
+        <div class="card-body d-flex flex-row justify-content-center floating">
+
             <div class="card mb-3 m-2 shadow-lg" style="max-width: 240px;">
                 <img src="https://razorpay.com/blog-content/uploads/2019/06/what-is-a-payment-gateway-and-how-does-it-work.png" class="img-fluid rounded-start" >
+                <img src="https://d6xcmfyh68wv8.cloudfront.net/assets/payments/payment_method_cards.png" >
+            </div>
+
+            <div class="card mb-3 m-2 shadow-lg " style="max-width: 240px;">
+                <img src="https://www.budgetease.biz/hs-fs/hubfs/bigstock-Investment-Concept-Of-Finances-378822634.jpg?width=900&name=bigstock-Investment-Concept-Of-Finances-378822634.jpg" >
+            </div>
+
+            <div class="card mb-3 m-2 shadow-lg " style="max-width: 240px;">
+                <img src="https://img.freepik.com/free-vector/save-money-line-with-smartphone_24877-51562.jpg?size=338&ext=jpg" >
+            </div>
+
+            <div class="card mb-3 m-2 shadow-lg " style="max-width: 240px;">
+                <img src="https://th.bing.com/th/id/R.c80b3fd49a21d743934295ecab58cc11?rik=VF3ACA%2f1%2fduz9w&riu=http%3a%2f%2fk3webcreation.com%2fimages%2fWEBSITE-DEVELOPMENT-IMAGE-BANNER-PAYMENT-GATEWAY.jpg&ehk=lrSccyrO6lMVRKlwEykpycqJuw1R1KLNLoElGQaLPis%3d&risl=&pid=ImgRaw&r=0" >
                 <img src="https://d6xcmfyh68wv8.cloudfront.net/assets/payments/payment_method_cards.png" >
             </div>
         </div>
@@ -24,16 +38,16 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-xl-3 col-6">
                 <a th:href="@{/providers/paypal}" class="btn btn-outline-secondary btn-rounded m-3" >Paypal</a>
             </div>
-            <div class="col-3">
+            <div class="col-xl-3 col-6">
                 <a th:href="@{/providers/trustpay}" class="btn btn-outline-secondary btn-rounded m-3" >TrustPay</a>
             </div>
-            <div class="col-3">
+            <div class="col-xl-3 col-6">
                 <a th:href="@{/providers/razopay}" class="btn btn-outline-secondary btn-rounded m-3" >Razopay</a>
             </div>
-            <div class="col-3">
+            <div class="col-xl-3 col-6">
                 <a th:href="@{/providers/payu}" class="btn btn-outline-secondary btn-rounded m-3" >Payu</a>
             </div>
         </div>
